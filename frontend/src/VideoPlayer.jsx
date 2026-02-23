@@ -4,7 +4,7 @@ export default function VideoPlayer() {
     const [tid, setTid] = useState('');
     const [videoUrl, setVideoUrl] = useState('');
     const handlePlay = () => {
-        const url = `http://localhost:8000/video/stream?uid=${uid}&tid=${tid}`;
+        const url = `https://aignosis-layc.onrender.com/video/stream?uid=${uid}&tid=${tid}`;
         setVideoUrl(url);
     };
     return (
