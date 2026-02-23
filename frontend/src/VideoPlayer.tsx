@@ -1,16 +1,16 @@
 import { useState } from 'react';
 export default function VideoPlayer() {
-    const [uid, setUid] = useState('');
-    const [tid, setTid] = useState('');
+    const [uid, setUid] = useState<string>('');
+    const [tid, setTid] = useState<string>('');
     const [videoUrl, setVideoUrl] = useState('');
-    const handlePlay = () => {
+    const handlePlay = ():void => {
         const url = `https://aignosis-layc.onrender.com/video/stream?uid=${uid}&tid=${tid}`;
         setVideoUrl(url);
     };
 
-    const handleExample = () =>{
-        setTid(456)
-        setUid(123)
+    const handleExample = ():void =>{
+        setTid("456")
+        setUid("123")
     }
     return (
         <>
