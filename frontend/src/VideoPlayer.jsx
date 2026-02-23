@@ -7,7 +7,13 @@ export default function VideoPlayer() {
         const url = `https://aignosis-layc.onrender.com/video/stream?uid=${uid}&tid=${tid}`;
         setVideoUrl(url);
     };
+
+    const handleExample = () =>{
+        setTid(456)
+        setUid(123)
+    }
     return (
+        <>
         <div>
             <h1>Admin Video Player</h1>
             <input
@@ -25,5 +31,9 @@ export default function VideoPlayer() {
                 <video controls width="800" src={videoUrl} />
             )}
         </div>
+        <div>
+            <button onClick={handleExample}>Try Example!!!</button>
+        </div>
+    </>
     );
 }

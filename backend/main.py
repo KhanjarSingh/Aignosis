@@ -79,6 +79,8 @@ def video_stream_generator(data: bytes, chunk_size: int = 1024 * 1024):
 
 @app.get("/video/stream")
 def stream_video(uid: str, tid: str):
+    uid = 123
+    tid = 456
     ENCRYPTED_VIDEO_PATH = os.path.join(STORAGE_DIR,f"{uid}_{tid}_encrypted.bin")
     ENCRYPTED_AES_KEY_BIN = os.path.join(STORAGE_DIR,f"{uid}_{tid}_encrypted_key.bin")
     if not os.path.exists(ENCRYPTED_VIDEO_PATH) or not os.path.exists(ENCRYPTED_AES_KEY_BIN):
